@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/fragmentListBarang">
+
+    <fragment
+        android:id="@+id/fragmentListBarang"
+        android:name="id.ac.ubaya.informatika.adv160418030uts.View.FragmentListBarang"
+        android:label="FragmentListBarang"
+        tools:layout="@layout/fragment_list_barang">
+        <action
+            android:id="@+id/actionFragmentDetilBarang"
+            app:destination="@id/fragmentDetilBarang"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetilBarang"
+        android:name="id.ac.ubaya.informatika.adv160418030uts.View.FragmentDetilBarang"
+        android:label="FragmentDetilBarang"
+        tools:layout="@layout/fragment_detil_barang" >
+        <argument
+            android:name="idBarang"
+            app:argType="string" />
+    </fragment>
+</navigation>
