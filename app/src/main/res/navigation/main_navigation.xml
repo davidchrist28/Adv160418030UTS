@@ -22,7 +22,19 @@
         android:label="FragmentDetilBarang"
         tools:layout="@layout/fragment_detil_barang" >
         <argument
-            android:name="idBarang"
+            android:name="nama"
+            app:argType="string" />
+        <argument
+            android:name="harga"
+            app:argType="integer" />
+        <argument
+            android:name="jumlah"
+            app:argType="integer" />
+        <argument
+            android:name="deskripsi"
+            app:argType="string" />
+        <argument
+            android:name="id"
             app:argType="string" />
     </fragment>
     <fragment
@@ -34,5 +46,9 @@
         android:id="@+id/itemAdd"
         android:name="id.ac.ubaya.informatika.adv160418030uts.View.FragmentTambahBarang"
         android:label="FragmentTambahBarang"
-        tools:layout="@layout/fragment_tambah_barang" />
+        tools:layout="@layout/fragment_tambah_barang" >
+        <action
+            android:id="@+id/actionItemHome"
+            app:destination="@id/itemHome" />
+    </fragment>
 </navigation>

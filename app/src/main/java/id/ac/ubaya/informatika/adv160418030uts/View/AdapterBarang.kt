@@ -27,10 +27,10 @@ class AdapterBarang(val listBarang: ArrayList<Barang>):RecyclerView.Adapter<Adap
     override fun onBindViewHolder(holder: BarangViewHolder, position: Int) {
         with(holder.view) {
             txtNamaBarang.setText(listBarang[position].namaBarang)
-            txtHargaBarang.setText(listBarang[position].hargaBarang)
+            txtHargaBarang.setText(listBarang[position].hargaBarang.toString())
             txtStok.setText(listBarang[position].jumlah.toString())
             cardViewItem.setOnClickListener {
-                val aksi = FragmentListBarangDirections.actionFragmentDetilBarang(listBarang[position].id)
+                val aksi = FragmentListBarangDirections.actionFragmentDetilBarang(listBarang[position].namaBarang, listBarang[position].hargaBarang, listBarang[position].jumlah, listBarang[position].keterangan, listBarang[position].id)
                 Navigation.findNavController(it).navigate(aksi)
             }
         }

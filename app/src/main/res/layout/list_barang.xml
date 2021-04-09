@@ -80,7 +80,7 @@
                 android:textAlignment="textEnd"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/txtStok"
+                app:layout_constraintEnd_toStartOf="@+id/txtJumlah"
                 app:layout_constraintStart_toEndOf="@+id/txtHargaBarang" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
